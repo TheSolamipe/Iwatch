@@ -1,0 +1,103 @@
+@import "./_variables";
+
+.landingPage {
+  // padding: 2rem;
+  grid-column: 2 / 3;
+  grid-row: 2/ 3;
+  align-items: center;
+  color: $color-secondary;
+
+  display: grid;
+  grid-template-columns: 15rem repeat(4, 20rem) 1fr 10rem;
+
+  &__content {
+    // background-color: $color-primary;
+    grid-column: 2/6;
+
+    &--header {
+      font-family: Br Firma Bold;
+      font-size: 6.062rem;
+      margin-bottom: 4rem;
+    }
+    &--text {
+      font-family: Br Firma Regular;
+      letter-spacing: 0.1rem;
+      font-size: 1.388rem;
+      margin-bottom: 6rem;
+      color: #dbd2d2;
+    }
+    &--btn {
+      &:link,
+      &:visited {
+        font-family: Br Firma Regular;
+        font-size: 1.98rem;
+        color: $color-secondary;
+        background-color: $color-primary;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.4rem 1.5rem;
+        display: inline-block;
+        border: 0.09rem solid $color-secondary;
+        border-radius: 2.6rem;
+        transition: all 0.2s;
+        position: relative;
+
+        display: flex;
+        // grid-template-columns: repeat(2, 1fr);
+        justify-content: space-between;
+        width: 24rem;
+      }
+      // &-arr {
+      //   grid-column: 2/-1;
+      // }
+      &:hover {
+        transform: translateY(-0.5rem);
+        box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.12);
+
+        &::after {
+          transform: scaleX(1.4) scaleY(1.6);
+          opacity: 0;
+        }
+      }
+      &:active {
+        transform: translateY(-0.1rem);
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
+      }
+    }
+  }
+  &__image {
+    grid-column: 6/ 7;
+    width: 63rem;
+    height: 63rem;
+
+    &-pink {
+      width: 36rem;
+      margin-left: 10rem;
+    }
+    &-white {
+      width: 36rem;
+      margin-left: 10rem;
+    }
+  }
+  &__slide {
+    grid-column: 7 / -1;
+    font-size: 3rem;
+  }
+  &__slide-item {
+    &:link,
+    &:visited {
+      font-size: 0.508rem;
+      color: $color-secondary;
+      padding: 0.8rem;
+      display: inline-block;
+      // border-radius: 2.5rem;
+      transition: all 0.2s;
+      // position: relative;
+    }
+    &:active {
+      background-color: $color-primary;
+      border: 0.07rem solid $color-secondary;
+      padding: 1rem;
+    }
+  }
+}

@@ -1,0 +1,151 @@
+@import "./_variables";
+
+.buynow {
+  display: grid;
+  grid-template-rows: 23.1rem 1fr 22.1rem;
+  grid-template-columns: 32rem repeat(1fr, 2) 32rem;
+  background-color: $color-primary;
+
+  &__images {
+    grid-row: 2/3;
+    grid-column: 2/3;
+    &-1 {
+      z-index: 1;
+      position: absolute;
+      top: 35rem;
+      left: 25rem;
+      width: 26.2rem;
+      height: 44.2rem;
+
+      &--white {
+        width: 38.2rem;
+        height: 47.2rem;
+        top: 33rem;
+        left: 17rem;
+      }
+    }
+    &-2 {
+      z-index: 100;
+      position: absolute;
+      left: 40rem;
+      width: 34.9rem;
+      height: 59.7rem;
+    }
+    &-3 {
+      z-index: 1;
+      position: absolute;
+      top: 35rem;
+      left: 65rem;
+      width: 26.2rem;
+      height: 44.2rem;
+
+      &--white {
+        width: 38.2rem;
+        height: 47.2rem;
+        top: 33rem;
+        left: 59rem;
+      }
+    }
+  }
+  &__content {
+    grid-row: 2/3;
+    grid-column: 3/4;
+    color: $color-secondary;
+
+    &--heading {
+      font-family: Br Firma Bold;
+      font-size: 4.13rem;
+      margin-bottom: 3.3rem;
+    }
+    &--price {
+      font-family: Br Firma Bold;
+      font-size: 4.18rem;
+      margin-bottom: 3.3rem;
+      color: #51aee7;
+
+      &-fade {
+        color: $color-tertiary;
+      }
+    }
+    &--text {
+      font-family: Br Firma Regular;
+      font-size: 1.85rem;
+      margin-bottom: 3.3rem;
+      color: #dbd2d2;
+    }
+    &--color {
+      font-family: Br Firma Bold;
+      font-size: 2.69rem;
+      margin-bottom: 3.3rem;
+    }
+    &--btns {
+      display: flex;
+      margin-bottom: 10.3rem;
+    }
+    &--btn {
+      &:link,
+      &:visited {
+        padding-left: 0.3rem;
+        margin-left: 0.6rem;
+        display: block;
+        transition: all 0.2s;
+        // position: relative;
+      }
+
+      &-white {
+        background-color: $color-secondary;
+        padding: 1.5rem 2rem;
+      }
+      &-blue {
+        background-color: #51aee7;
+        padding: 1.5rem 2rem;
+      }
+      &-pink {
+        background-color: #d0c5cb;
+        padding: 1.5rem 2rem;
+      }
+      &-black {
+        background-color: $color-tertiary;
+        padding: 1.5rem 2rem;
+      }
+    }
+    &--clickbtn {
+      &:link,
+      &:visited {
+        font-family: Br Firma Regular;
+        font-size: 1.98rem;
+        color: $color-secondary;
+        background-color: $color-primary;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.4rem 1.5rem;
+        display: inline-block;
+        border: 0.09rem solid $color-secondary;
+        border-radius: 2.6rem;
+        transition: all 0.2s;
+        position: relative;
+
+        display: flex;
+        // grid-template-columns: repeat(2, 1fr);
+        justify-content: space-between;
+        width: 24rem;
+      }
+      // &-arr {
+      //   grid-column: 2/-1;
+      // }
+      &:hover {
+        transform: translateY(-0.5rem);
+        box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.12);
+
+        &::after {
+          transform: scaleX(1.4) scaleY(1.6);
+          opacity: 0;
+        }
+      }
+      &:active {
+        transform: translateY(-0.1rem);
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
+      }
+    }
+  }
+}

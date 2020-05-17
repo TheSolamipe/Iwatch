@@ -1,0 +1,39 @@
+@import "./variables";
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; //10px/16px = 62.5% i.e 1rem = 10px
+}
+
+.app {
+  display: grid;
+  grid-template-columns: 17.5rem 1fr;
+  grid-template-rows: 20rem 1fr 20rem;
+  background-color: $color-secondary;
+}
+
+.maincontent {
+  grid-row: 1/-1;
+  grid-column: 1/-1;
+}
+
+.land {
+  grid-row: 1/-1;
+  grid-column: 1/-1;
+
+  display: grid;
+  grid-template-columns: 17.5rem 1fr;
+  grid-template-rows: 20rem 1fr 20rem;
+  background-color: $color-primary;
+}
+.buy {
+  grid-row: 1/-1;
+  grid-column: 1/-1;
+}
